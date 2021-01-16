@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+import Chart from './charts/bar-chart/bar-chart'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Chart />
   </React.StrictMode>,
   document.getElementById('root')
 )
