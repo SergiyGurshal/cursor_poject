@@ -1,0 +1,19 @@
+.navBtnHome {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8%;
+  border: none;
+  border-right: 2px solid #232f34;
+  background-color: #232f3400;
+}
+
+.navBtnHome:hover {
+  background-color: #4a6572;
+}
+
+.mainCharts {
+  margin-left: 8%;
+}
