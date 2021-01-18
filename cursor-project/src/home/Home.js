@@ -9,28 +9,24 @@ import { Table } from '../table/Table'
 import Modal from '../modal/Modal'
 import { render } from '@testing-library/react'
 
-
-
- class Home extends React.Component{
-  constructor(props){
-    super(props);
+class Home extends React.Component {
+  constructor(props) {
+    super(props)
     this.state = {
-      showModal: false
-    }   
+      showModal: false,
+    }
   }
   modalShowHandler = () => {
-    this.setState({showModal: true})
+    this.setState({ showModal: true })
   }
   render() {
     return (
       <div>
-        {/* контейнер з основними компонентами */}
-        <div className="mainHome">
-          <h1>Home Page</h1>
-        </div>
         <Table />
-        <Modal showModal = {this.state.showModal}/>
-        <button type='button' className='addBtn' onClick={() => this.modalShowHandler()}>+</button>
+        <Modal showModal={this.state.showModal} />
+        <button type="button" className="addBtn" onClick={() => this.modalShowHandler()}>
+          +
+        </button>
         {/* лінка на сторінку графіків*/}
         <Link to="/charts">
           <button className="navBtnCharts">
