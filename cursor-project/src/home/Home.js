@@ -1,13 +1,13 @@
 import React from 'react'
 import chartsIcon from '../imgs/charts_icon.svg'
 
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './Home.css'
 
 import { Table } from '../table/Table'
 import Modal from '../modal/Modal'
-import { render } from '@testing-library/react'
+import TabPanel from '../tabs/TabPanel'
 
 class Home extends React.Component {
   constructor(props) {
@@ -22,15 +22,20 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Table />
-        <Modal showModal={this.state.showModal} />
-        <button type="button" className="addBtn" onClick={() => this.modalShowHandler()}>
-          +
-        </button>
+        {/* контейнер з основними компонентами */}
+        <div className="mainHome">
+          <TabPanel />
+          <Table />
+          <Modal showModal={this.state.showModal} />
+          <button type="button" className="addBtn" onClick={() => this.modalShowHandler()}>
+            +
+          </button>
+        </div>
+
         {/* лінка на сторінку графіків*/}
         <Link to="/charts">
           <button className="navBtnCharts">
-            <img src={chartsIcon} />
+            <img src={chartsIcon} alt="Home icon" />
           </button>
         </Link>
       </div>

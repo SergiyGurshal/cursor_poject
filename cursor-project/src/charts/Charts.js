@@ -4,9 +4,9 @@ import ChartBar from './bar-chart/bar-chart'
 
 import './Charts.css'
 
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export default () => {
+const Charts = () => {
   return (
     <div>
       {/* контейнер з основними компонентами */}
@@ -17,9 +17,11 @@ export default () => {
       {/* лінка на головну сторінку */}
       <Link to="/">
         <button className="navBtnHome">
-          <img src={homeIcon} />
+          <img src={homeIcon} alt="ChartsIcon" />
         </button>
       </Link>
     </div>
   )
 }
+
+export default Charts
