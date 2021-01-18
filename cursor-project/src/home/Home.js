@@ -21,6 +21,9 @@ import { render } from '@testing-library/react'
   modalShowHandler = () => {
     this.setState({showModal: true})
   }
+  modalHideHandler = () => {
+    this.setState({showModal: false})
+  }
   render() {
     return (
       <div>
@@ -29,7 +32,7 @@ import { render } from '@testing-library/react'
           <h1>Home Page</h1>
         </div>
         <Table />
-        <Modal showModal = {this.state.showModal}/>
+        <Modal showModal = {this.state.showModal} modalHideHandler = {this.modalHideHandler}/>
         <button type='button' className='addBtn' onClick={() => this.modalShowHandler()}>+</button>
         {/* лінка на сторінку графіків*/}
         <Link to="/charts">
