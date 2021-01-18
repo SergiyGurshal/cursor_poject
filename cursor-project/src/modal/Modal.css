@@ -1,0 +1,55 @@
+.modal{
+    width: 80vw;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4a6572;
+    box-shadow: 5px 5px 10px 5px rgba(45, 45, 46, 0.8), -5px -5px 10px 5px rgba(105, 105, 105, 0.8);
+    display: none;
+}
+
+.formWrapper{
+    width: 90%;
+    margin: 50px auto;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+select{
+    width: 15%;
+}
+
+select,
+input{
+    padding: 0 20px;
+    border: none;
+    font-size: 16px;
+    line-height: 1;
+    outline: transparent;
+    height: 42px;
+    margin: 0 3px;
+}
+
+.btnWrapper{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.btnWrapper button {
+    padding: 10px 20px;
+}
+
+.btnWrapper button + button {
+    margin-left: 10px;
+}
+
+.modalShow{
+    display: block;
+}
