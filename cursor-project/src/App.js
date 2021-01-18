@@ -1,7 +1,14 @@
-import './App.css'
+import "./App.css";
+
+import TabPanel from "./TabPanel";
 
 function App() {
-  return <div className="App"></div>
+  return (
+    <div className="App">
+      <TabPanel />
+
+    </div>
+  );
 }
 
-export default App
+export default App;

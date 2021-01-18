@@ -1,0 +1,12 @@
+.MuiTab-wrapper {
+  color: white;
+}
+
+.MuiTabs-flexContainer {
+  background-color: black;
+  justify-content: space-between;
+}
+
+.makeStyles-root-1 {
+  background-color: #232f34;
+}
