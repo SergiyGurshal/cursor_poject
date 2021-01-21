@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
-// import Chart from './charts/bar-chart/bar-chart'
 import Home from './home/Home'
 import Chart from './charts/Charts'
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import homeIcon from '../imgs/home_icon.svg'
+import ChartBar from './bar-chart/bar-chart'
 
 import './Charts.css'
 
@@ -10,7 +11,7 @@ export default () => {
     <div>
       {/* контейнер з основними компонентами */}
       <div className="mainCharts">
-        <h1>Charts Page</h1>
+        <ChartBar />
       </div>
 
       {/* лінка на головну сторінку */}
