@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 import './Home.css'
 
-import { Table } from '../table/Table'
+import { HomeTable } from '../table/Table'
 import Modal from '../modal/Modal'
-import { render } from '@testing-library/react'
+// import { render } from '@testing-library/react'
 
 
 
@@ -15,8 +15,12 @@ import { render } from '@testing-library/react'
   constructor(props){
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      showActionButtons: false
     }   
+  }
+  showActionButtonsHandler = () => {
+    this.setState({showActionButtons: true})
   }
   modalShowHandler = () => {
     this.setState({showModal: true})
@@ -31,9 +35,10 @@ import { render } from '@testing-library/react'
         <div className="mainHome">
           <h1>Home Page</h1>
         </div>
-        <Table />
+        {console.log(this.props)}
+        <HomeTable showActionButtonsHandler = {this.showActionButtonsHandler} showActionButtons = {this.state.showActionButtons}/>
         <Modal showModal = {this.state.showModal} modalHideHandler = {this.modalHideHandler}/>
-        <button type='button' className='addBtn' onClick={() => this.modalShowHandler()}>+</button>
+        <button type='button' className='addBtn' onClick={this.modalShowHandler}>+</button>
         {/* лінка на сторінку графіків*/}
         <Link to="/charts">
           <button className="navBtnCharts">

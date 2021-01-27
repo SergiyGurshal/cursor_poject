@@ -1,6 +1,8 @@
 .tableList{
-    width: 100%;
+    margin-left: 2%;
+    margin-right: 10%;
 }
+
 ul, li{
     list-style: none;
     color: #fff;
@@ -18,3 +20,46 @@ li{
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
+.tableHead{
+    height: 60px;
+    align-items: center;
+    background-color: #9a9a9a;
+    font-size: 22px;
+}
+
+.actionWrapper{
+    position: relative;
+}
+
+.actionBtn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: transparent;
+}
+
+.actionButtons{
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    border: 1px solid ;
+    display: none;
+}
+
+.actionButtons button{
+    width: 100px;
+    height: 40px;
+    display: block;
+    border: none;
+    outline: transparent;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.actionButtons button:hover{
+    background-color: rgb(138, 137, 138);
+}
+
+.modalShow{
+    display: block;
+}
